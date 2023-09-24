@@ -1,6 +1,6 @@
-# flet
+# flet-nginx
 
-## About flet
+## About flet-nginx
 
 Deploy a flet static website to NGINX!
 
