@@ -49,7 +49,8 @@ flet publish main.py
 python -m http.server --directory dist
 ```
 4. test the static website using [NGINX](https://www.nginx.com/)
-    4.1. build Docker image
+
+   4.1. build Docker image
     ```shell
     docker built . -t app-name
     ```
