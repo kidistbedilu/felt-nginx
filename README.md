@@ -64,7 +64,7 @@ python -m http.server --directory dist
    ```shell
    docker pull ghcr.io/kidistbedilu/flet-nginx:latest
    ```
-   5.2 run
+   5.2 run container at port 80
    ```shell
    docker run -p 80:80 ghcr.io/kidistbedilu/flet-nginx:latest
    ```
