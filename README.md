@@ -58,6 +58,16 @@ python -m http.server --directory dist
     ```shell
     docker run -p 80:80 app-name
     ```
+5. test the static website using [flet-nginx package](https://github.com/kidistbedilu/felt-nginx/pkgs/container/flet-nginx)
+
+   5.1 pull image
+   ```shell
+   docker pull ghcr.io/kidistbedilu/flet-nginx:latest
+   ```
+   5.2 run
+   ```shell
+   docker run -p 80:80 ghcr.io/kidistbedilu/flet-nginx:latest
+   ```
 
 counter-app screenshot.
 ![counter-screenshot](assets/counter-app.png)
@@ -66,6 +76,8 @@ counter-app screenshot.
 
 - [x] counter app
 - [x] deploy to NGINX
+- [x] Dockerize  
+    - [x] Publish Docker image to GitHub container registry
 
 > See the [open issues](https://github.com/kidistbedilu/flet-nginx/issues) for a full list of proposed features and known issues.
 
