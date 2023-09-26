@@ -58,13 +58,33 @@ python -m http.server --directory dist
     ```shell
     docker run -p 80:80 app-name
     ```
-5. test the static website using [flet-nginx package](https://github.com/kidistbedilu/felt-nginx/pkgs/container/flet-nginx)
+5. publish Package to GitHub Container Registry / GHCR
 
-   5.1 pull image
+   5.1 navigate to your image file location
+   ```shell
+   cd src/flet-nginx && ls
+   ```
+   5.2 build Docker image
+   ```shell
+   build . -t ghcr.io/kidistbedilu/flet-nginx:latest
+   ```
+   5.3 test image
+   ```shell
+   docker run -p 80:80 ghcr.io/kidistbedilu/flet-nginx:latest
+   ```
+   5.4 push image to GitHub Container Registry / GHCR
+   ```shell
+   push ghcr.io/kidistbedilu/flet-nginx:latest
+   ```
+   5.5 login to [GitHub](https://github.com/) then change the package/image from `Private` to `Public` and add `ReadMe` by connecting to a `repository`
+
+7. test the static website using [flet-nginx package](https://github.com/kidistbedilu/felt-nginx/pkgs/container/flet-nginx)
+
+   6.1 pull image
    ```shell
    docker pull ghcr.io/kidistbedilu/flet-nginx:latest
    ```
-   5.2 run container at port 80
+   6.2 run container at port 80
    ```shell
    docker run -p 80:80 ghcr.io/kidistbedilu/flet-nginx:latest
    ```
